@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
 import AuthRoute from './AuthRoute';
 import Day from '../components/day/Day/Day.container';
+import { Day as DayNew } from '../features/day/Day';
 import Settings from '../components/settings/Settings';
 import Report from '../components/report/Report';
 import Forgot from '../components/auth/Forgot/Forgot.container';
@@ -13,6 +14,7 @@ import RedirectRoot from './RedirectRoot';
 const Routes = () => (
   <Switch>
     <PrivateRoute exact path="/" component={Day} />
+    <PrivateRoute exact path="/day/:dayId?/:taskId?" component={DayNew} />
     <PrivateRoute exact path="/settings/:pageId" component={Settings} />
     <PrivateRoute exact path="/report/:dayId" component={Report} />
     <AuthRoute exact path="/login" component={LoginCard} />

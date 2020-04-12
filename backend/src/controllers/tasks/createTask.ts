@@ -22,10 +22,7 @@ const validate = (body: Body) => {
     dayId: Joi.string().required(),
     sectionId: Joi.string().required(),
     payload: Joi.object({
-      title: Joi.string()
-        .min(1)
-        .max(500)
-        .required(),
+      title: Joi.string().min(1).max(500).required(),
       notes: Joi.object().allow(''),
       time: Joi.number().required(),
       start: Joi.date().allow(null),
@@ -66,6 +63,8 @@ export const createTask = async (req: Request, res: Response) => {
 
   const task = new TaskModel(payload);
   section.tasks.push(task);
+
   await day.save();
-  res.json({ task });
+
+  res.json(task);
 };
