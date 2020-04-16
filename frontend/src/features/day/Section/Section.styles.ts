@@ -5,3 +5,8 @@ export const StyledSection = styled.div`
 `;
 
 export const SectionWithTasks = styled.div``;
+
+export const TasksContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;

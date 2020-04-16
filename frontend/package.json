@@ -11,7 +11,10 @@
     "eject": "react-scripts eject",
     "lint": "eslint './src/**/*.{js,jsx}' --fix --max-warnings=0",
     "format": "pretty-quick --staged",
-    "analyze": "source-map-explorer 'build/static/js/*.js'"
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
+    "docz:serve": "docz build && docz serve"
   },
   "browserslist": [
     ">0.2%",
@@ -73,6 +76,7 @@
     "@typescript-eslint/eslint-plugin": "^2.28.0",
     "@typescript-eslint/parser": "^2.28.0",
     "babel-plugin-macros": "^2.8.0",
+    "docz": "^2.3.1",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-import": "^2.20.2",
