@@ -22,7 +22,7 @@
     "@binarycapsule/editor": "^1.1.1",
     "@binarycapsule/ui-capsules": "^3.2.0",
     "@nivo/pie": "^0.61.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "focus-visible": "^5.1.0",
     "formik": "^2.1.4",
     "history": "^4.10.1",
